@@ -24,7 +24,7 @@ config() {
 	git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" -c commit.gpgSign=false "$@"
 }
 
-config am "$DIRNAME/server.patch"
+config am "$DIRNAME/server.patch" --allow-empty
 
 # gpg key warning
 touch "$HOME/.config/.shell-warn-off"
