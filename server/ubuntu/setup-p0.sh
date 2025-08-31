@@ -8,8 +8,6 @@ stty sane
 useradd -m $NEW_USER
 passwd $NEW_USER
 usermod -aG sudo $NEW_USER
-cp -r /root/.ssh /home/$NEW_USER
-rm -r /root/.ssh
 
 sudo apt install -y git
 
