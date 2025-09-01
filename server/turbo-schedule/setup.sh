@@ -22,5 +22,6 @@ clone_repo
 )
 
 install_nginx_site_with_replace "kvg.tvarkarastis.com" "PORT" "CONFIG_URL"
+install_nginx_site_with_replace "plain"
 
 >&2 printf "\ndeployed turbo-schedule. though, for full deployment, re-deploy yourself thru turbo-schedule/deploy.sh\n\n"

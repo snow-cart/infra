@@ -1,0 +1,12 @@
+# managed via $INFRA_REPO_URL
+
+# This is just the plain schedule, basically middleware between turbo-schedule and the school's plain schedule, so if the URI changes, or theres errors that have to be adjusted manually, we wouldn't need to commit to the turbo-schedule repository
+
+server {
+    listen 80;
+	server_name plain.kvg.bonk.lt;
+
+	# Comment the unwanted version
+	return 301 $scheme://upload.bonk.lt/tvarkarastis/$request_uri;
+	# return 301 $scheme://vetrungesgimnazija.lt/tvarkarastis/$request_uri;
+}
