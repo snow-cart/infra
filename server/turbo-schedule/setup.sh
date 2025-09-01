@@ -12,8 +12,8 @@ REPO="turbo-schedule"
 REPO_AUTHOR="basedschool"
 PRIVATE=1
 BRANCH="school-kvg"
-PORT="7000"
-IMAGE_USER=mykolasspu
+export PORT="7000"
+export IMAGE_USER=mykolasspu
 clone_repo
 
 (
