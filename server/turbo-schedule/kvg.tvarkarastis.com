@@ -2,7 +2,7 @@
 
 server {
 	listen 80;
-	server_name kvg.bonk.lt www.kvg.bonk.lt kvg.tvarkarastis.com www.kvg.tvarkarastis.com
+	server_name kvg.bonk.lt www.kvg.bonk.lt kvg.tvarkarastis.com www.kvg.tvarkarastis.com;
 
 	location = /cfg {
 		return 301 $CONFIG_URL;
