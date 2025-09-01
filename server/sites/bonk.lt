@@ -1,0 +1,15 @@
+# managed via $INFRA_REPO_URL
+
+# TODO: make
+
+server {
+    listen 80;
+	server_name bonk.lt www.bonk.lt;
+
+	root /home/$USER/infra/server/sites/bonk.lt.git;
+	index index.html index.htm index.nginx-debian.html;
+
+	location / {
+		try_files $uri $uri/ $uri.html =404;
+	}
+}
