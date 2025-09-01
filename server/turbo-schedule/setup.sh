@@ -9,15 +9,18 @@ cd "$DIRNAME"
 . "./vars.sh"
 
 REPO="turbo-schedule"
-BRANCH="whole-week-schedule" # TODO FIXME
-clone_forked_repo
+REPO_AUTHOR="basedschool"
+PRIVATE=1
+BRANCH="school-kvg"
+PORT="7000"
+IMAGE_USER=mykolasspu
+clone_repo
 
 (
 	cd "$REPO_ROOT"
 	./run-docker.sh
 )
 
-install_nginx_site_with_replace "tvarkarastis.com" "PORT" "CONFIG_URL"
+install_nginx_site_with_replace "kvg.tvarkarastis.com" "PORT" "CONFIG_URL"
 
 >&2 printf "\ndeployed turbo-schedule. though, for full deployment, re-deploy yourself thru turbo-schedule/deploy.sh\n\n"
-

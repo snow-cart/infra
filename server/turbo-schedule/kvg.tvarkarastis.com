@@ -2,7 +2,7 @@
 
 server {
 	listen 80;
-	server_name tvarkarastis.com www.tvarkarastis.com;
+	server_name kvg.bonk.lt www.kvg.bonk.lt kvg.tvarkarastis.com www.kvg.tvarkarastis.com
 
 	location = /cfg {
 		return 301 $CONFIG_URL;
@@ -32,4 +32,3 @@ server {
 	client_header_buffer_size 	1024K;
 	large_client_header_buffers 4 1024K;
 }
-
