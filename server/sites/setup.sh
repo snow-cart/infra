@@ -13,3 +13,8 @@ cd "$DIRNAME"
 # 	install_nginx_site_with_replace "$REPO" "USER"
 # )
 
+(
+	REPO="upload.bonk.lt"
+	install_nginx_site_with_replace "$REPO" "USER"
+	mkdir uploads
+)

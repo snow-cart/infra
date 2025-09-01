@@ -1,0 +1,13 @@
+# managed via $INFRA_REPO_URL
+
+server {
+    listen 80;
+	server_name upload.bonk.lt www.upload.bonk.lt;
+
+	root /home/$USER/infra/server/sites/uploads;
+	index index.html index.htm index.nginx-debian.html;
+
+	location / {
+		try_files $uri $uri/ $uri.html =404;
+	}
+}

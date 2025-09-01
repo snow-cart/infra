@@ -1,5 +1,6 @@
 # dynamically cloned repos
 *.git
+server/sites/uploads
 
 # generated automatically
 *.generated
