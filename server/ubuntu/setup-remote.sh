@@ -36,11 +36,7 @@ ssh $SSH_ROOT "\
 	mkdir -p /root/.ssh && \
 	chmod 700 /root/.ssh && \
 	echo '$publicKey' >> /root/.ssh/authorized_keys && \
-	chmod 600 /root/.ssh/authorized_keys && \
-	\
-	mkdir -p /home/$NEW_USER/.ssh && \
-	cp -r /root/.ssh /home/$NEW_USER && \
-	chown -R $NEW_USER:$NEW_USER /home/$NEW_USER/.ssh
+	chmod 600 /root/.ssh/authorized_keys
 "
 
 # Get .../server/ubuntu/vars.sh and .../server/vars.sh into a single vars.sh on the remote

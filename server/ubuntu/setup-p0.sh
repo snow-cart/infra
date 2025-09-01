@@ -9,6 +9,10 @@ useradd -m $NEW_USER
 passwd $NEW_USER
 usermod -aG sudo $NEW_USER
 
+mkdir -p /home/$NEW_USER/.ssh && \
+cp -r /root/.ssh /home/$NEW_USER && \
+chown -R $NEW_USER /home/$NEW_USER/.ssh
+
 sudo apt install -y git
 
 #su $NEW_USER
@@ -16,7 +20,7 @@ sudo apt install -y git
 sudo -u $NEW_USER bash <<EOF
 	cd ~
 	git clone https://github.com/$GITHUB_USERNAME/infra ~/infra
-	sudo ~/infra/server/ubuntu/setup-p1.sh
+	sudo -E ~/infra/server/ubuntu/setup-p1.sh
 EOF
 
 sudo -u $NEW_USER bash <<EOF
